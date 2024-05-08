@@ -11,7 +11,7 @@ public class StreamBenchmark {
         Random random = new Random();
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < size; i++) {
-            list.add(random.nextInt(1, 50000));
+            list.add(random.nextInt(50000) + 1);
         }
 
         List<Integer> resultSecuencial = list.stream()
