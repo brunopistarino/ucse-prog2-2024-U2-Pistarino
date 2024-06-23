@@ -1,26 +1,32 @@
 import org.example.AvionPrivado;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class AvionPrivadoTest {
+
+    private AvionPrivado avionPrivado;
+
+    @BeforeEach
+    public void setUp() {
+        avionPrivado = new AvionPrivado(1000, 10);
+    }
+
     @Test
-    public void testAvionPrivadoVolarReturn1000() {
-        AvionPrivado avionPrivado = new AvionPrivado(1000, 10);
+    public void testAvionPrivadoVolarReturn1500() {
         int result = avionPrivado.volar(100);
-        Assertions.assertEquals(result, 1500);
+        Assertions.assertEquals(1500, result);
     }
 
     @Test
     public void testAvionPrivadoCapacidadCombustibleReturn1000() {
-        AvionPrivado avionPrivado = new AvionPrivado(1000, 10);
         int result = avionPrivado.getCapacidadCombustible();
-        Assertions.assertEquals(result, 1000);
+        Assertions.assertEquals(1000, result);
     }
 
     @Test
     public void testAvionPrivadoConsumoCombustibleReturn10() {
-        AvionPrivado avionPrivado = new AvionPrivado(1000, 10);
         int result = avionPrivado.getConsumoCombustible();
-        Assertions.assertEquals(result, 10);
+        Assertions.assertEquals(10, result);
     }
 }
