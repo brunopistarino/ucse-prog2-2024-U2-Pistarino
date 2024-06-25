@@ -1,6 +1,5 @@
-import org.example.AvionComercial;
-import org.example.AvionPrivado;
-import org.example.CalculadorCombustible;
+package org.example;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
